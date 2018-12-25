@@ -1,9 +1,6 @@
 package app.pooi.common.mapper;
 
-import org.apache.ibatis.annotations.InsertProvider;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.annotations.UpdateProvider;
+import org.apache.ibatis.annotations.*;
 
 public interface BaseMapper<T> {
 
@@ -14,6 +11,7 @@ public interface BaseMapper<T> {
      * @return entity
      */
     @SelectProvider(type = SqlProviderAdapter.class, method = "selectById")
+    @Options(useGeneratedKeys = true)
     T selectByPrimaryKey(long primaryKey);
 
 
