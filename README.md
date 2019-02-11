@@ -1,12 +1,12 @@
 # Mapper
 mybatis common mapper
 
-# How to Use:
+# How to Use Common Mapper:
 1. extends BaseMapper
 2. call baseMapper's common function
 3. enjoy~
 
-# @CreatedBy / ModifiedBy
+# How to Use @CreatedBy / ModifiedBy
 
 1. Define your entity, emaple:
 ```java
